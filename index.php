@@ -8,7 +8,7 @@
 ?>
 <html lang="en">
 <head>
-	<title>Login | MDLOUNGE</title>
+	<title>Login | MDCAFE</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->

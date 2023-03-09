@@ -114,7 +114,7 @@
               //echo "<br>";
               //echo $nama_user . " || " . $username . " || " . $password . " || " . $id_level . " || " . $status;
               //echo "<br></br>";
-              $query_daftar = "insert into tb_user values ('','$username','$password','$nama_user','$id_level','$status')";
+              $query_daftar = "insert into tb_user (username, password, nama_user, id_level, status) values ('$username','$password','$nama_user','$id_level','$status')";
               $sql_daftar = mysqli_query($conn, $query_daftar);
               if($sql_daftar){
                 header('location: index.php');

@@ -220,7 +220,7 @@ if(isset ($_SESSION['username'])){
               //echo "<br>";
               //echo $nama_user . " || " . $username . " || " . $password . " || " . $id_level . " || " . $status;
               //echo "<br></br>";
-              $query_tambah_masakan = "insert into tb_masakan values ('','$nama_masakan','$harga','$stok','$status_masakan','$gambar')";
+              $query_tambah_masakan = "insert into tb_masakan values ('$nama_masakan','$harga','$stok','$status_masakan','$gambar')";
               $sql_tambah_masakan= mysqli_query($conn, $query_tambah_masakan);
               if($sql_tambah_masakan){
                 header('location: entri_referensi.php');
@@ -245,7 +245,7 @@ if(isset ($_SESSION['username'])){
               }
               $gbr = $_FILES["gambar"]["name"];
 
-              $query_ubah_masakan = "update tb_masakan set nama_masakan = '$nama_masakan', harga = '$harga', stok = '$stok', status_masakan = '$status_masakan' where id_masakan = '$id_masakan'";;
+              $query_ubah_masakan = "update tb_masakan set nama_masakan = ('$nama_masakan', harga = '$harga', stok = '$stok', status_masakan = '$status_masakan' where id_masakan = '$id_masakan')";
               $sql_ubah_masakan = mysqli_query($conn, $query_ubah_masakan);
 
               //$gambar = file($_POST['gambar']);
